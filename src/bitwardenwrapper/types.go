@@ -18,7 +18,7 @@ type BwLogin struct {
 	Uris                 []BwUri `json:"uris"`
 	Username             string  `json:"username"`
 	Password             string  `json:"password"`
-	TOTP                 string  `json:"totp"`
+	TOTP                 bool    `json:"totp"`
 	PasswordRevisionDate *string `json:"passwordRevisionDate"`
 }
 
@@ -31,7 +31,7 @@ type BwItem struct {
 	Name           string           `json:"name"`
 	Notes          string           `json:"notes"`
 	Favourite      bool             `json:"favourite"`
-	Logins         []BwLogin        `json:"logins"`
+	Login          BwLogin          `json:"login"`
 	CollectionIds  []BwCollectionId `json:"colletionIds"`
 	RevisionDate   string           `json:"revisionDate"`
 }
