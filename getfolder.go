@@ -5,6 +5,7 @@ import (
 	"fmt"
 )
 
+// GetFolder finds a bitwarden folder by name and returns it or nil and error if it cannot
 func GetFolder(folderName string) (*BwFolder, error) {
 	folderjson, err := runBw("list", "folders")
 	if err != nil {
