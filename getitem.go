@@ -3,6 +3,7 @@ package bitwardenwrapper
 import (
 	"encoding/json"
 	"fmt"
+	"path/filepath"
 )
 
 // GetItem finds a bitwarden item by name within a given bitwarden folder and returns it or nil and error if it cannot
@@ -32,4 +33,9 @@ func GetItemFromFolder(itemName string, folderName string) (*BwItem, error) {
 		return nil, err
 	}
 	return item, nil
+}
+
+func GetItemByPath(path string) (*BwItem, error) {
+	folder, itemName := filepath.Split(path)
+	return GetItemFromFolder(folder, itemName)
 }

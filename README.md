@@ -18,3 +18,4 @@ You can just call GetItem and GetFolder if you're happy to do something with the
 
 Basically because this is security related and reimplementation of anything is riskier than just using an existing tool for the purpose for which I needed it.
 
+Bitwarden is GPL, and their [swagger.json](https://bitwarden.com/help/api/) is AGPL, which makes it hard to include in other projects. An executable boundary to the GPL licensed binary makes this easier to consume.
